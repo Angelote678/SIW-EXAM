@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" th:href="@{/css/addIngredient.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Add Ingredient Page</title>
+</head>
+<body>
+	<div>
+		<h3>Ingredient form</h3>
+    </div>
+    <div class="big-block">
+		<form th:action="@{/addingredient}" method="POST">
+			<div>
+				<div class="space">Ingredient name: <input name="name" type="text" required /><span th:if="${#fields.hasErrors('ingredient.name')}" th:errors="*{ingredient.name}"></span></div>
+				<div class="space">Ingredient origin: <input name="origin" type="text" required /><span th:if="${#fields.hasErrors('ingredient.origin')}" th:errors="*{ingredient.origin}"></span></div>			
+				<div class="space">Ingredient description: <input name="description" type="text" required /><span th:if="${#fields.hasErrors('ingredient.description')}" th:errors="*{ingredient.description}"></span></div>
+			    <div class="space"><button class="btn" type="submit">Submit</button></div>
+			</div>
+		</form>
+    </div>
+</body>
+</html>

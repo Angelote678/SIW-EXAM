@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Add Buffet Page</title>
+    <link rel="stylesheet" th:href="@{/css/addBuffet.css}" />
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+</head>
+<body>
+	<div>
+		<h3>New Buffet</h3>
+	</div>
+	<div>
+		<form th:action="@{/addbuffet}" method="POST">
+			<div class="big-block"> 
+				<div class="space" >Buffet name: <input name="name" type="text" required /><span th:if="${#fields.hasErrors('buffet.name')}" th:errors="*{buffet.name}"></span></div>
+				<div class="space">Buffet description: <input name="description" type="text" required /><span th:if="${#fields.hasErrors('buffet.description')}" th:errors="*{buffet.description}"></span></div>
+				<div class="space">Chef first name: <input type="text" th:field=*{chef.firstName}/><span th:if="${#fields.hasErrors('chef.firstName')}" th:errors="*{chef.firstName}"></span></div>
+	            <div class="space">Chef last name: <input type="text" th:field=*{chef.lastName}/><span th:if="${#fields.hasErrors('chef.lastName')}" th:errors="*{chef.lastName}"></span></div>
+			    <div class="space">Chef nationality: <input type="text" th:field=*{chef.nationality}/><span th:if="${#fields.hasErrors('chef.nationality')}" th:errors="*{chef.nationality}"></span></div>
+			    <div class="space"><button class="btn" type="submit">submit</button></div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+

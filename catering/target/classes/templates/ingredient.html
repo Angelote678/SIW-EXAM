@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+        <title>Ingredient Page</title>
+        <link rel="stylesheet" th:href="@{/css/ingredient.css}" />
+        <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+    </head>
+<body>
+      <div>
+		<div>
+    	   <div class="space"><h3>Ingredient selected: </h3></div>
+		   <div class="Container">
+				<h3 class="space" th:text=" ${ingredient.name}"></h3>
+				<div class="space" th:text=" ${ingredient.origin}"></div>
+				<div class="space" th:text=" ${ingredient.description}"></div>
+			</div>
+	    </div>
+    </div>
+</body>
+</html>

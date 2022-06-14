@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Buffet Page</title>
+    <link rel="stylesheet" th:href="@{/css/addDish.css}" />
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+</head>
+<body>
+	<div>
+		<h3>Add a Dish</h3>
+    </div>
+    <div class="big-block">
+		<form th:action="@{/adddish}" method="POST">
+			<div>
+				<div class="space">Dish Name: <input name="name" type="text" required /><span th:if="${#fields.hasErrors('dish.name')}" th:errors="*{dish.name}"></span></div>
+				<div class="space">Dish Description: <input name="description" type="text" required /><span th:if="${#fields.hasErrors('dish.description')}" th:errors="*{dish.description}"></span></div>
+			    <div><button class="btn" type="submit">submit</button></div>
+			</div>
+		</form>
+    </div>
+</body>
+</html>

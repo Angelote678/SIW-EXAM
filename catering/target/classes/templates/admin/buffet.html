@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+        <title>Buffet Page</title>
+        <link rel="stylesheet" th:href="@{/css/buffet.css}" />
+        <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+    </head>
+<body>
+  
+    <div>
+    <div class="space"><h2>Buffet Selected </h2></div>
+      <div class="Container">
+        <h3 th:text="${buffet.name}"></h3>
+    	<div  class="space"th:text="${buffet.description}"></div>
+    	<div  class="space">Dishes by the chef</div>
+    	<div class="al"><a class="Container" th:href="@{'/chefad' + '/' + ${chef.id}}" th:text="${chef.lastName}">...</a></div>
+		<div><h4>Dishes List</h4></div>
+		<div class="marco">
+		  <ul>
+		    <li th:each="dish : ${buffet.dishes}">
+			  <div class="al"><a class="Container" th:href="@{'/buffetad' + '/' + ${dish.id}}" th:text="${dish.name}">...</a></div>
+			  <div  class="space"><a class="generic" th:href="@{'/todeletedish' + '/' + ${dish.id}}" th:method="POST">Remove</a></div>
+			</li>
+		  </ul>
+		   
+		  <div  class="Container">
+			<a class="generic" th:href="@{'/adddishto' + '/' + ${buffet.id}}"> Add a new dish </a>
+   		  </div>
+	    </div>
+	  </div>
+   		<div  class="Container">
+			<a class="generic" th:href="@{/logout}">Logout</a>
+   		</div>
+    </div>
+ 
+</body>
+</html>

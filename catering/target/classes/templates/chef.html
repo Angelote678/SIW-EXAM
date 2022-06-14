@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" th:href="@{/css/cheff.css}" />
+	<link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+    <title>Chef Page</title>
+</head>
+<body>
+      <div>
+      <div class="space"><h3>Chef Selected</h3></div>
+		<div class="Container">
+		  <div class="space"> FIRST NAME </div><div th:text=" ${chef.firstName}"></div>
+		  <div class="space"> LAST NAME </div><div th:text=" ${chef.lastName}"></div>
+		  <div class="space"> NATIONALITY </div><div th:text=" ${chef.nationality}"></div>
+		  <div>
+		  <h4>Buffets list: </h4>
+			    <ul>
+				   <li th:each="buffet : ${chef.buffets}">
+					  <div><a th:href="@{'/home' + '/' + ${buffet.id}}" th:text="${buffet.name}">...</a></div>
+				   </li>
+			    </ul>
+		  </div>
+		</div>
+	  </div>
+</body>
+</html>

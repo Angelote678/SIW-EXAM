@@ -1,0 +1,162 @@
+html{
+
+   height: auto;
+    width: auto;
+
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    width: auto;
+    background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+h1{
+    color: #092518; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 62px; font-weight: 800; 
+    line-height: 72px; margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+h2{
+    color: #092518; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 30px; font-weight: 800; 
+    line-height: 36px; margin: 0 0 24px; 
+    text-align: center;
+
+}
+
+.desc{
+
+    color: #092518; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 18px; font-weight: 500; 
+    line-height: 32px; 
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.button{
+    
+
+    margin: 20px;
+    margin-top: 1cm;
+    border: 1px solid #4a7ed0; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #4a7ed0; /*color botón*/
+    color: #000000; /*color texto*/
+    text-decoration:double; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    text-align: center;
+}
+
+.contenedor{
+
+    margin: 20px;
+    margin-top: 1cm;
+    text-align: center;
+
+}
+
+.contenedor_img{
+
+	text-align : center;
+}
+
+.gallery:hover {
+border: 1px solid #777;
+}
+
+.gallery img {
+width: 100%;
+height: auto;
+}
+
+.descent {
+padding: 15px;
+text-align: center;
+}
+
+a:link { /* Pseudoclase a para links */
+    text-decoration: none;  /*links no visitado */
+    color: #000066;
+    font-weight: bold;
+    display:block;
+	width:120px;
+	text-align:center;
+	padding:4px;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+span.linkheader a:link {  /* Pseudoclase compuesta a para links */
+    color: white;   /* Afecta a links no visitados descendientes de un span con clase linkheader*/
+}
+
+span.linkheader a:visited {  /* Pseudoclase compuesta a para links */
+    color: white;  /* Afecta a links visitados descendientes de un span con clase linkheader*/
+}
+
+span.linkheader a:hover {  /* Pseudoclase compuesta a para links */
+    color: red;  /* Afecta a links cuando pones el raton encima descendientes de un span con clase linkheader*/
+}
+
+a:hover,a:active
+{
+background-color:pink;
+}
+
+ul{
+	
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+
+}
+
+li{
+float:left;
+}
+
+
+.generic{
+	
+	margin:2em;
+	
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.socialMedia{
+
+    align-items: baseline;
+}
+
+.gallery{
+margin-left:3cm;
+}
+.master_button{
+	
+	
+    margin: 20px;
+    margin-top: 1cm;
+    color: black;
+    border: 5px solid rgb(0, 0, 0);
+    align-items:center;
+    text-align: center;
+}

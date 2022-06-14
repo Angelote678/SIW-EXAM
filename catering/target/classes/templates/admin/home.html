@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" th:href="@{/css/home.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home Page</title>
+</head>
+<body>
+      <div>
+		
+    	   <div class="space"><h3>BUFFET LIST</h3></div>
+		<div class="Container">
+		     <ul>
+			   <li th:each="buffet : ${buffets}">
+			   <div class="spaces">
+				  <div class="space"><a href="buffet.html" 
+				   th:href="@{'/homead' + '/' + ${buffet.id}}" 
+				   th:text="${buffet.name}">...</a></div>
+				   
+				   <div class="space"><a th:href="@{'/todeletebuffet' + '/' + ${buffet.id}}" th:method="POST">Remove</a></div>
+				 </div>  
+			   </li>
+		    </ul>
+		</div>
+		
+		    <div class="space">
+			  <a class="btn" th:href="@{/addbuffet}"> Add a new buffet </a>
+   		    </div  >
+	    </div>
+   		<div class="space">
+			<a class="btn" th:href="@{/logout}">Logout</a>
+   		</div>
+    </div>
+</body>
+</html>

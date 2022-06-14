@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" th:href="@{/css/index.css}" />
+        <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+        <title>Index Page</title>
+    </head>
+<body>
+    <div>
+    	<h1>Angel's Catering Service'</h1>
+        <h2>All our catering services are now available in our new page</h2>
+        <div class="descent">Please, choose one of the options to access our services</div>
+        
+        <div class="contenedor_img"><img th:src="@{/images/buffet-2953875_1920.jpg}" width="400" height="250"></div>
+        
+        
+		<div class="master_button">
+            <div class="contenedor">
+                <a class="button" th:href="@{/login}" th:method="get">ADMIN ACCESS</a>
+            </div>
+            <div class="contenedor">
+                <a class="button" th:href="@{/home}" th:method="get">AVAILABLE BUFFETS</a>
+            </div>
+        </div>
+    </div>
+
+	<div class="descent"><h4>Chek out our Social Media</h4></div>
+    <div class="socialMedia">
+		<ul>
+			<li><a th:href="@{mailto:angelote678@gmail.com}" class="fa fa-google"> E-MAIL</a></li>
+			<li><a th:href="@{https://twitter.com/Angelote678}" class="fa fa-twitter"> TWITTER</a></li>
+			<li><a th:href="@{https://www.instagram.com/angel_alm__/}" class="fa fa-instagram"> INSTAGRAM</a></li>
+		</ul>
+		<div class="generic"> TLF: +34 651671557</div>
+	</div>
+</body>
+</html>

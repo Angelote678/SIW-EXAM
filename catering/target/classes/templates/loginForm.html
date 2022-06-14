@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<link rel="stylesheet" th:href="@{/css/loginForm.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body>
+	<div>
+		<h3>Login Page</h3>
+		<h3>Credentials are required</h3>
+	</div>
+	<div class="big-block" >
+		<form th:action="@{/login}" method="POST">
+			
+				<div class="input" >
+					<i class="fa fa-envelope icon"></i>
+					<span>Username:</span>
+					<span><input name="username" type="text" required /></span>
+				</div>		
+				<div class="input">
+					<i class="fa fa-key icon"></i>
+					<span>Password:</span>
+					<span><input name="password" type="password" required /></span>
+				</div>
+				<div>
+					<span><button type="submit">Login</button></span>
+				</div>
+			
+		</form>
+	</div>
+</body>
+</html>

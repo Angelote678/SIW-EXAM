@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+        <title>Dish Page</title>
+        <link rel="stylesheet" th:href="@{/css/dish.css}" />
+        <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
+    </head>
+<body>
+      
+		<div>
+    	   <h2>Dish selected: </h2>
+		   <div class="Container_Dish">
+				<h3 th:text=" ${dish.name}"></h3>
+				<div th:text=" ${dish.description}"></div>
+				<div><h4>List of ingredients:</h4></div>
+				  <ul>
+				    <li th:each="ingredient : ${dish.ingredients}">
+						<div class="space"><a href="ingredient.html" 
+						th:href="@{'/dish' + '/' + ${ingredient.id}}" 
+						th:text="${ingredient.name}">...</a></div>
+					 </li>
+				  </ul>
+			</div>
+	    </div>
+    
+</body>
+</html>
